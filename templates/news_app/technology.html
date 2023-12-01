@@ -1,0 +1,17 @@
+{% extends 'news_app/base.html' %}
+
+{% load static %}
+
+{% block title %} Technology News{% endblock %}
+
+{% block content %}
+
+{% for news in technology_news %}
+    <a href="{{ news.get_absolute_url }}">
+    <img src="{{ news.image.url }}" alt="{{ news.title }}">
+    <h3>{{ news.title }}</h3>
+    </a>
+    <hr>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'news_app/base.html' %}
+
+{% load static %}
+
+{% block title %} Sport {% endblock %}
+
+{% block content %}
+    <div style="padding: 50px; width:80%">
+        <h3 style="padding-left: 50px;">{{ news.title }}</h3>
+        <h5 style="padding-left: 50px;">{{ news.published_time }}</h5>
+        <img style="padding-left: 50px;" src="{{ news.image.url }}" alt="">
+        <p style="padding: 50px;">{{ news.body }}</p>
+    </div>
+{% endblock %}
